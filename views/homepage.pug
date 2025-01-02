@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title= title
+  body
+    h1 Custom Objects List
+    a(href="/update-cobj") Add to this table
+    if data && data.length
+      table(border="1")
+        thead
+          tr
+            th Name
+            th Book's Genre
+            th Number of Pages
+        tbody
+          each item in data
+            tr
+              td= item.properties.name
+              td= item.properties.book_s_genre
+              td= item.properties.number_of_pages
+    else
+      p No custom objects found.

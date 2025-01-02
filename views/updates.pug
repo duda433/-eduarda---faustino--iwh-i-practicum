@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title= title
+  body
+    h1 Update Custom Object Form
+    form(action="/update-cobj" method="post")
+      div
+        label(for="name") Name:
+        input(type="text" id="name" name="name" required)
+      div
+        label(for="book_s_genre") Book's Genre:
+        input(type="text" id="book_s_genre" name="book_s_genre" required)
+      div
+        label(for="number_of_pages") Number of Pages:
+        input(type="number" id="number_of_pages" name="number_of_pages" required)
+      div
+        button(type="submit") Submit
+    a(href="/") Return to the homepage
